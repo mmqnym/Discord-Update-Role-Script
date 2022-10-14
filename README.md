@@ -14,10 +14,12 @@ python app.py
 ## Commands
 
 - /update roles
-This command can update role(s) of the server members.
+
+> This command can update role(s) of the server members.
 
 - /reload lists
-This command reloads the lists of role(s) to update.
+
+> This command reloads the lists of role(s) to update.
 
 ## LICENSE
 [MIT](LICENSE)
