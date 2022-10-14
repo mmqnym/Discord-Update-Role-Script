@@ -18,7 +18,7 @@ intents.members = True
 
 bot = discord.Bot(
     intents=intents,
-    owner_id=configs.OWNER_ID,
+    owner_id=configs.get("OWNER_ID"),
     activity=discord.Activity(type=discord.ActivityType.watching, name="Server"),
     status=discord.Status.online,
 )
@@ -55,11 +55,11 @@ async def update_roles(ctx: discord.ApplicationContext) -> None:
     add_role_list = []
     del_role_list = []
 
-    for id in configs.ADD_ROLE_ID:
+    for id in configs.get("ADD_ROLE_ID"):
         role = discord.utils.get(guild.roles, id=id)
         add_role_list.append(role)
     
-    for id in configs.DEL_ROLE_ID:
+    for id in configs.get("DEL_ROLE_ID"):
         role = discord.utils.get(guild.roles, id=id)
         del_role_list.append(role)
 
@@ -98,4 +98,4 @@ async def reload_lists(ctx: discord.ApplicationContext) -> None:
 
     await ctx.respond("The lists have been reloaded.")
 
-bot.run(configs.BOT_TOKEN)
+bot.run(configs.get("BOT_TOKEN"))
