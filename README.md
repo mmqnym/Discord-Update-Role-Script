@@ -20,4 +20,4 @@ This command can update role(s) of the server members.
 This command reloads the lists of role(s) to update.
 
 ## LICENSE
-[MIT](LINCESE)
+[MIT](LICENSE)
